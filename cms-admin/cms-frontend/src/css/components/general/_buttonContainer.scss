@@ -1,0 +1,11 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.buttonContainer {
+  text-align: right;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: variables.$gapGridBox;
+}

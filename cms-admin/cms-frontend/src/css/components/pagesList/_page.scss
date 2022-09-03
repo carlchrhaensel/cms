@@ -1,0 +1,39 @@
+@use "../../abstracts/variables";
+
+.page {
+  padding: variables.$paddingGridBox;
+  background-color: white;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__info {
+    flex: 1;
+    &__title {
+      margin: 0;
+
+      span {
+        min-width: 50px;
+        padding-right: 10px;
+        display: inline-block;
+      }
+    }
+
+    &__url {
+      margin: 0;
+
+      span {
+        min-width: 50px;
+        padding-right: 10px;
+        display: inline-block;
+      }
+    }
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

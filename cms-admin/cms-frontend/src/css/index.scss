@@ -1,0 +1,43 @@
+@use "abstracts/variables";
+@use "abstracts/mixins";
+
+@use "admin";
+
+@use "components/editPage/_editPageIndex";
+@use "components/general/_generalIndex";
+@use "components/input/_inputIndex";
+@use "components/nav/_navIndex";
+@use "components/pagesList/_pagesListIndex";
+@use "components/tabs/_tabsIndex";
+@use "pages/_pagesIndex";
+@use "pageComponents/_pageComponentsIndex";
+
+:root {
+  --mainColor: #{variables.$mainBlue};
+  --gapGridBox: 30px;
+  --paddingGridBox: #{variables.$paddingGridBox};
+
+  @include mixins.respond-to("desktopSmall") {
+    --gapGridBox: 20px;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Montserrat", "Arial", serif;
+}
+
+.secret {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+
+  img {
+    height: 300px;
+  }
+}

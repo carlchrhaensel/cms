@@ -1,0 +1,21 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/variables";
+
+.topNav {
+  height: variables.$heightNavbar;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 8px gray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+
+  &__logo {
+    height: 75%;
+    width: auto;
+    margin-left: 20px;
+  }
+}

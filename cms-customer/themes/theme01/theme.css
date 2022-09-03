@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&family=Roboto&display=swap");
+.theme01 {
+  background-color: #f5f5f5;
+}
+.theme01 .nav {
+  background-color: white;
+  text-align: center;
+}
+.theme01 .nav a {
+  color: #237a5c;
+  padding: 20px 10px;
+  font-weight: 600;
+}
+.theme01 .nav a:hover {
+  background-color: lightgray;
+}
+.theme01__h1, .theme01__h2, .theme01__h3 {
+  font-family: "Playfair Display", serif;
+}
+.theme01 .header {
+  text-align: center;
+}
+.theme01 .header__heading {
+  font-family: "Playfair Display", serif;
+  color: #237a5c;
+}
+.theme01 .header__subHeading {
+  text-transform: uppercase;
+}
+.theme01 .aside > div {
+  background-color: transparent;
+}
+.theme01 .aside > div > h1:first-child {
+  color: #237a5c;
+}
+.theme01 .footer {
+  background-color: transparent;
+}
+.theme01 .footer * {
+  color: #237a5c;
+}
+
+/*# sourceMappingURL=theme.css.map */

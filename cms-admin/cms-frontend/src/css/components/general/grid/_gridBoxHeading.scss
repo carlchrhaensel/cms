@@ -1,0 +1,16 @@
+@use "../../../abstracts/mixins";
+@use "../../../abstracts/variables";
+
+.gridBoxHeading {
+  font-size: 2rem;
+  margin: 0;
+  line-break: auto;
+  max-width: 100%;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+
+  @include mixins.respond-to("desktopSmall") {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,7 @@
+@use "../../../abstracts/mixins";
+@use "../../../abstracts/variables";
+
+.gridBox {
+  padding: variables.$paddingGridBox;
+  background-color: white;
+}

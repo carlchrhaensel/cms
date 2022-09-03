@@ -1,0 +1,22 @@
+.addPageComponent {
+  background-color: white;
+  padding: 10px;
+
+  &__heading {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__list {
+    & > p {
+      cursor: pointer;
+      margin: 3px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

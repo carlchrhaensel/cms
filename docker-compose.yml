@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  cms-mysql:
+    image: mysql:8.0.17
+    container_name: cms-mysql
+    hostname: cms-mysql
+    build: 
+      context: ./mysql/
+      dockerfile: Dockerfile
+    environment:
+      - MYSQL_ROOT_PASSWORD=pw
+      - MYSQL_DATABASE=test
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_USER=cms_user
+      - MYSQL_PASSWORD=pw
+    ports:
+      - '3306:3306'
+    networks:
+      cms:
+        aliases:
+          - cms-mysql
+
+  cms-admin:
+    container_name: cms-admin
+    environment:
+      - DB_HOSTNAME=cms-mysql
+      - DB_NAME=cms
+      - DB_PORT=3306
+      - DB_USERNAME=root
+      - DB_PASSWORD=pw
+    build: 
+      context: cms-admin/
+      dockerfile: Dockerfile
+    ports:
+      - "4001:80"
+    networks:
+      cms:
+        aliases:
+          - cms-admin
+
+  cms-customer:
+    environment:
+      - DB_HOSTNAME=cms-mysql
+      - DB_NAME=cms
+      - DB_PORT=3306
+      - DB_USERNAME=root
+      - DB_PASSWORD=pw
+    build: 
+      context: cms-customer/
+      dockerfile: Dockerfile
+    ports:
+      - "4002:80"
+    networks:
+      cms:
+        aliases:
+          - cms-customer          
+
+networks:
+  cms:
+    external: false

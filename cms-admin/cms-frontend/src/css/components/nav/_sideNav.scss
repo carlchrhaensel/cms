@@ -1,0 +1,77 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/variables";
+
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  background-color: variables.$mainBlue;
+  color: white;
+  height: calc(100vh - #{variables.$heightNavbar});
+  position: fixed;
+  top: variables.$heightNavbar;
+  left: 0;
+  overflow-y: auto;
+  z-index: 1;
+  box-shadow: 0 0 8px gray;
+
+  @include mixins.respond-to("tablet") {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: unset;
+    bottom: 0;
+    height: variables.$navbarMobileHeight;
+    width: 100%;
+    text-align: center;
+    overflow-y: unset;
+  }
+
+  &__heading {
+    color: variables.$textGray;
+    padding: 40px 15px 5px;
+    margin: 0;
+
+    @include mixins.respond-to("tablet") {
+      display: none;
+    }
+  }
+
+  &__item {
+    padding: 0 15px;
+    width: 180px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: variables.$mainBlue;
+    cursor: pointer;
+    gap: 10px;
+
+    &:hover {
+      filter: brightness(0.85);
+    }
+
+    @include mixins.respond-to("tablet") {
+      height: unset;
+      justify-content: center;
+      width: 100%;
+      max-width: 50px;
+      padding: 0;
+    }
+
+    &__icon {
+      width: 30px;
+      object-fit: contain;
+      height: 1rem;
+      object-position: left;
+    }
+
+    p {
+      margin: 0;
+      display: inline-block;
+
+      @include mixins.respond-to("tablet") {
+        display: none;
+      }
+    }
+  }
+}

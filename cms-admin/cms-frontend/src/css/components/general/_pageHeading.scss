@@ -1,0 +1,18 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.pageHeading {
+  font-size: 3rem;
+  margin: 0;
+  padding: 30px 0;
+  font-weight: 700;
+  color: variables.$mainBlue;
+
+  @include mixins.respond-to("tablet") {
+    font-size: 2rem;
+  }
+
+  @include mixins.respond-to("mobile") {
+    font-size: 1.75rem;
+  }
+}

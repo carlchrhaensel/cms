@@ -1,0 +1,15 @@
+@use "../../abstracts/variables";
+
+.tabList{
+  &__item {
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    font-weight: 600;
+
+    &-current {
+      border-bottom: 3px solid variables.$mainBlue;
+    }
+  }
+}

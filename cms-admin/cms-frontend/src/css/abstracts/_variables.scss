@@ -1,0 +1,25 @@
+$mobile: 480px;
+$tablet: 840px;
+$desktopSmall: 1100px;
+$heightNavbar: 80px;
+
+$breakpoints: (
+        'mobile': (max-width: $mobile),
+        'tablet': (max-width: $tablet),
+        'desktopSmall': (max-width: $desktopSmall),
+);
+
+$mainBlue: #2C3E4E;
+$textGray: #707070;
+$lightGray: #D4D4D4;
+
+$contentMargin: 50px;
+$contentMarginMobile: 25px;
+$navbarMobileHeight: 50px;
+
+$paddingGridBox: 10px;
+$gapGridBox: 30px;
+
+$transitionTime: 0.3s;
+
+$fontFamily: "Segoe UI", Montserrat, Arial, serif;

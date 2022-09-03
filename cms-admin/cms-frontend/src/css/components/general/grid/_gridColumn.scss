@@ -1,0 +1,8 @@
+@use "../../../abstracts/variables";
+@use "../../../abstracts/mixins";
+
+.gridColumn {
+  display: flex;
+  gap: var(--gapGridBox);
+  flex-direction: column;
+}

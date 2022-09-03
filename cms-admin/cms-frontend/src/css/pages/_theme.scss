@@ -1,0 +1,11 @@
+.theme {
+  &__list {
+    &__theme {
+      padding: 10px;
+
+      &-current {
+        background-color: lightgray;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.editPage {
+  &__pageComponent {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 20px auto;
+  }
+}

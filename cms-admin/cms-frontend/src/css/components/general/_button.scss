@@ -1,0 +1,25 @@
+@use "../../abstracts/variables";
+
+.btn {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  display: inline-block;
+  transition: variables.$transitionTime;
+  border: 0;
+  background-color: variables.$mainBlue;
+
+  &:hover {
+    filter: brightness(0.85);
+  }
+
+  &-disabled {
+    background-color: variables.$lightGray !important;
+    cursor: default !important;
+
+    &:hover {
+      filter: none !important;
+    }
+  }
+}

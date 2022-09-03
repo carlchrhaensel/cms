@@ -1,0 +1,21 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/variables";
+
+.adminContent {
+  margin-left: 210px;
+  padding-left: variables.$contentMargin;
+  padding-right: variables.$contentMargin;
+  margin-top: variables.$heightNavbar;
+  position: relative;
+  padding-bottom: 75px;
+  min-height: calc(100vh - #{variables.$heightNavbar});
+  background-color: variables.$lightGray;
+
+  @include mixins.respond-to("tablet") {
+    margin-left: 0;
+    padding-left: variables.$contentMarginMobile;
+    padding-right: variables.$contentMarginMobile;
+    margin-bottom: variables.$heightNavbar + 10px;
+    padding-bottom: 75px;
+  }
+}

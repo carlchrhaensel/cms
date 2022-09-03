@@ -1,0 +1,13 @@
+.textInput {
+  label {
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  input[type=text] {
+    padding: 10px;
+    display: block;
+    width: calc(100% - 24px);
+    margin-bottom: 8px;
+  }
+}
